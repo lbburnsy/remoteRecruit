@@ -1,0 +1,25 @@
+<header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand font-color" href="#">FreeCruiter</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" aria-current="page" href="#aboutMe">Home</a>
+            <a class="nav-link active" href="#sampleWork">Freelancer</a>
+            <a class="nav-link active" href="#contactSection">Employer</a>
+            <a class="nav-link active" href="#contactSection">Login</a>
+          </div>
+          </div>
+        </div>
+        </nav>
+    </header>
+
+{{#if logged_in}}
+    <a href="/profile">profile</a> |
+    <button class="no-button" id="logout">logout</button>
+{{else}}
+    <a href="/login">login</a>
+{{/if}}

@@ -1,1 +1,85 @@
 {{!-- Homepage template/ --}}
+
+{{ > navbar}}
+
+<main>
+        <div class="container heroImage">
+            <div class="row text-center introText">
+                <div class="col-4-lg col-12-md col-12-sm col-12-xs">
+                    <a class="btn btn-light px-5 viewMyWorkBtn" href="#sampleWork">Signup as a Freelancer</a>
+                    <a class="btn btn-light px-5 viewMyWorkBtn" href="#sampleWork">Signup as an Employer</a>
+                  </div>
+              </div>
+        </div>
+
+        <section class="section-1">
+            <div class="container">
+              <div class="row pt-5">
+                <h2 id="latestJobs">Latest Jobs</h2>
+              </div>
+
+              <div>
+                <a href="#frontEnd"><button type="button" class="btn btn-dark" >Front-End</button></a>
+                <a href="#backEnd"><button type="button" class="btn btn-dark" >Back-End</button></a>
+                <a href="#fullStack"><button type="button" class="btn btn-dark" >Full-Stack</button></a>
+              </div>
+
+            <br>
+
+            <section class="container">
+            <h3 class="gallery-name">{{gallery.name}}</h3>
+            <section class="flex-row justify-center">
+                {{#each gallery.paintings as |painting|}}
+                <section class="card">
+                <a href="/painting/{{id}}">
+                    <header>{{title}}</header>
+
+                    <div class="card-body">
+                    <img src="/images/{{filename}}" alt="{{description}}">
+                    <p>By: {{artist}}</p>
+                    </div>
+                </a>
+                </section>
+                {{/each}}
+            </section>
+            </section>
+
+
+              <h4 id="frontEnd">Front-end</h4>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div>
+
+              <h4 id="backEnd">Back-End</h4>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div>
+
+              <h4 id="fullStack">Full-Stack</h4>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
