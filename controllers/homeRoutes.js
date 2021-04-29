@@ -1,11 +1,28 @@
 const router = require('express').Router();
-// Need models object to be de-structured here.
-// withAuth middleware here?
+const { Employer, Freelancer, FullStack, BackEnd, FrontEnd } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/', (req, res) => {
+
+router.get('/', async (req, res) => {
     try {
-        res.render('homepage')
+        const frontEndData = await FrontEnd.findAll();
+        const frontEndJobs = frontEndData.map(data => data.get({ plain: true }));
+        
+        const backEndData = await BackEnd.findAll();
+        const backEndJobs = backEndData.map(data => data.get({ plain: true }));
+
+        const fullStackData = await FullStack.findAll();
+        const fullStackJobs = fullStackData.map(data => data.get({ plain: true }));
+
+        res.render('homepage', {
+            fullStackJobs,
+            backEndJobs,
+            frontEndJobs,
+            logged_in: req.session.logged_in
+        })
     } catch (err) {
         res.status(500).json(err);
     }
 })
+
+module.exports = router;
