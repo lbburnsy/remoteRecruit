@@ -31,11 +31,11 @@
   <section class="container">
 
     <section class="container">
-      <h4 id="frontEnd">Front-End</h4>
-      {{#each frontEndJobs as |job|}}
+      <a href="/jobs/front-end"><h4 id="frontEnd">Front-End</h4></a>
+       {{#each frontEndJobs as |job|}}
       <div class="card mx-5 my-3">
         <div class="card-body">
-          <h4 id="{{job.name}}">{{job.name}}</h4>
+          <a href="/jobs/front-end/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
           <div>{{job.location}}</div>
         </div>
@@ -44,12 +44,11 @@
     </section>
 
     <section class="container">
-      <h4 id="backEnd">Back-End</h4>
+      <a href="/jobs/back-end"><h4 id="backEnd">Back-End</h4></a>
       {{#each backEndJobs as |job|}}
-      
       <div class="card mx-5 my-3">
         <div class="card-body">
-          <h4 id="{{job.name}}">{{job.name}}</h4>
+          <a href="/jobs/back-end/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
           <div>{{job.location}}</div>
         </div>
@@ -59,12 +58,11 @@
 
     
     <section class="container">
-      <h4 id="fullStack">Full-Stack</h4>
+       <a href="/jobs/full-stack"><h4 id="fullStack">Full-Stack</h4></a>
       {{#each fullStackJobs as |job|}}
-      
-      <div class="card mx-5 my-3">
+       <div class="card mx-5 my-3">
         <div class="card-body">
-          <h4 id="{{job.name}}">{{job.name}}</h4>
+          <a href="/jobs/full-stack/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
           <div>{{job.location}}</div>
         </div>
