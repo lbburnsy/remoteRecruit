@@ -1,0 +1,36 @@
+{{!-- Login Page --}}
+
+{{> navbar}}
+
+<main>
+
+      <div class="container formContainer mt-5">
+        <div class="row mt-5">
+          <div class="col-6 mt-5">
+
+            <form class="loginform p-5"> 
+              <div class="mb-3">
+                <label for="email-login" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="password-login" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password-login">
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+          </div>
+
+          <div class="col-6">
+
+            <img src="./assets/pexels-ekaterina-bolovtsova-4050216.jpg" alt="side image">
+
+          </div>
+        </div>
+      </div>
+        
+    </main>
+
+    <script src="./js/login.js"></script>

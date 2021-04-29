@@ -10,7 +10,7 @@ body, html{
     position: relative;
     height: 600px;
     overflow: hidden;
-    background: url("./pexels-ken-tomita-389818.jpg") no-repeat center;
+    background: url("./assets/pexels-ken-tomita-389818.jpg") no-repeat center;
     background-size: cover;
     margin-bottom: 20px;
     
@@ -24,4 +24,14 @@ body, html{
     color: white;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.container .formContainer{
+    padding-top: 200px;
+    margin-top: 500px;
+}
+
+.loginform{
+    background-color: white;
+    border-radius: 20px;
 }
