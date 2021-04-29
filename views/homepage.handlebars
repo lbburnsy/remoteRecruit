@@ -27,28 +27,27 @@
             <br>
 
             <section class="container">
-            <h3 class="gallery-name">{{gallery.name}}</h3>
-            <section class="flex-row justify-center">
-                {{#each gallery.paintings as |painting|}}
-                <section class="card">
-                <a href="/painting/{{id}}">
-                    <header>{{title}}</header>
-
-                    <div class="card-body">
-                    <img src="/images/{{filename}}" alt="{{description}}">
-                    <p>By: {{artist}}</p>
-                    </div>
-                </a>
-                </section>
+              {{#each jobs as |job| }}
+                 <h4 id="{{job.jobTitle}}">{{job.jobTitle}}</h4>
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                <div>{{job.postingDate}}</div> 
+                  <div>{{job.location}}</div>
+                </div>
+              </div>
+              {{!-- <div class="card mx-5 my-3">
+                <div class="card-body">
+                  this should display the filtered category chosen
+                </div>
+              </div> --}}
                 {{/each}}
             </section>
-            </section>
-
+           </section>
 
               <h4 id="frontEnd">Front-end</h4>
               <div class="card mx-5 my-3">
                 <div class="card-body">
-                  this should display the filtered category chosen
+             
                 </div>
               </div>
               <div class="card mx-5 my-3">
