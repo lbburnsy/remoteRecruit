@@ -6,6 +6,13 @@ body, html{
     font-family: sans-serif;
 }
 
+/* body{
+    background-image: url('./ian-schneider-TamMbr4okv4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
 .heroImage{
     position: relative;
     height: 600px;
@@ -25,3 +32,14 @@ body, html{
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
+.container .formContainer{
+    padding-top: 200px;
+    margin-top: 500px;
+}
+
+.loginform{
+    background-color: white;
+    border-radius: 20px;
+}
+
