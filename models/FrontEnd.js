@@ -36,6 +36,13 @@ FrontEnd.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    employer_id: {
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'employer',
+          key: 'id'
+      },
+  },
   },
   {
     sequelize,
