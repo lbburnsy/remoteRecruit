@@ -1,59 +1,60 @@
 {{> navbar}}
 
 <main>
+        <div class="container formContainer mt-5">
+            <div class="row mt-5">
+              <div class="col mt-5">
+    
+                <form class="loginform p-5"> 
+                    <div class="mb-3">
+                        <label for="name-signup" class="form-label">Name</label>
+                        <input type="email" class="form-control" id="name-signup" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail-signup" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="mail-signup" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password-signup" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password-signup">
+                    </div>
+                    <div class="mb-3">
+                        <label for="location-signup" class="form-label">Where are you located</label>
+                        <input type="password" class="form-control" id="location-signup">
+                    </div>
+                    <div class="mb-3">
+                        <label for="website-signup" class="form-label">Website</label>
+                        <input type="password" class="form-control" id="website-signup">
+                        <div class="form-text">Github, LinkedIn, or other portfolio site.</div>
+                    </div>
+                    
+                    <div class="category-switches p-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="front-end" name="developer-type" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Front-End</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="back-end" name="developer-type" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Back-End</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="full-stack" name="developer-type" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Full-Stack</label>
+                        </div>
+                        
+                    </div>
 
-  <div class="container formContainer mt-5">
-    <div class="row mt-5">
-      <div class="col-6 mt-5">
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+    
+              </div>
+    
+            </div>
+          </div>
 
-        <form class="signup-form p-5">
-          <div class="mb-3">
-            <label for="name-signup" class="form-label">Name</label>
-            <input type="input" class="form-control" id="name-signup" data-role="freelancer">
-          </div>
-          <div class="mb-3">
-            <label for="email-signup" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email-signup" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="password-signup" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password-signup">
-          </div>
-          <div class="mb-3">
-            <label for="location-signup" class="form-label">Where are you located</label>
-            <input type="input" class="form-control" id="location-signup">
-          </div>
-          <div class="mb-3">
-            <label for="portfolio-signup" class="form-label">Portfolio</label>
-            <input type="input" class="form-control" id="website-signup">
-            <div class="form-text">Github, LinkedIn, or other portfolio site.</div>
-          </div>
-          {{!-- <div class="form-check form-switch"> --}}
-            {{!-- <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Front-End</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-            <label class="form-check-label" for="flexSwitchCheckChecked">Back-End</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
-            <label class="form-check-label" for="flexSwitchCheckChecked">Full-Stack</label>
-          </div> --}}
-          <button type="submit" class="btn btn-primary">Create Account</button>
-        </form>
+    </main>
 
-      </div>
 
-      <div class="col-6">
-
-        <img src="./assets/pexels-ekaterina-bolovtsova-4050216.jpg" alt="side image">
-
-      </div>
-    </div>
-  </div>
-
-</main>
 
 <script src="/js/signup.js"></script>
