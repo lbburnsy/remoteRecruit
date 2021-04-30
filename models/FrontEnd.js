@@ -36,10 +36,10 @@ FrontEnd.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    employer_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-          model: 'employer',
+          model: 'user',
           key: 'id'
       },
   },

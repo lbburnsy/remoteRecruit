@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employer, Freelancer, FullStack, BackEnd, FrontEnd } = require('../models');
+const { User, FullStack, BackEnd, FrontEnd } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -23,6 +23,10 @@ router.get('/', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
+})
+
+router.get('/signup', (req, res) => {
+    res.render('signup');
 })
 
 module.exports = router;

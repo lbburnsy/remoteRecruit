@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-class Employer extends Model {}
+class User extends Model {}
 
-Employer.init(
+User.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -39,6 +39,10 @@ Employer.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
+        role: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     },
     {
         hooks: {
@@ -55,8 +59,8 @@ Employer.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'employer',
+        modelName: 'user',
       }
 )
 
-module.exports = Employer;
+module.exports = User;
