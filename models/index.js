@@ -1,7 +1,6 @@
-const Employer = require('./Employer');
-const Freelancer = require('./Freelancer');
+const User = require('./User');
 const FullStack = require('./FullStack');
 const BackEnd = require('./BackEnd');
 const FrontEnd = require('./FrontEnd');
 
-module.exports = { Employer, Freelancer, FullStack, BackEnd, FrontEnd };
+module.exports = { User, FullStack, BackEnd, FrontEnd };

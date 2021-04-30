@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Employer, Freelancer, FullStack, BackEnd, FrontEnd } = require('../models');
+const { User, FullStack, BackEnd, FrontEnd } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -24,5 +24,39 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 })
+
+router.get('/signup/freelancer', (req, res) => {
+    try {
+        res.render('signupFreelancer');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/signup/employer', (req, res) => {
+    try {
+        res.render('signupEmployer');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/logout', async (req, res) => {
+    try {
+        res.redirect("/");
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get("/login", (req, res) => {
+    if (req.session.logged_in) {
+      res.redirect("/");
+      return;
+    }
+  
+    res.render("login");
+  });
+  
 
 module.exports = router;

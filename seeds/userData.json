@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Sal",
+        "location": "Kansas",
+        "email": "sal@gmail.com",
+        "password": "salpassword",
+        "website": "wikipedia.com",
+        "role": "freelancer"
+    },
+    {
+        "name": "Dan",
+        "location": "Missouri",
+        "email": "dan@gmail.com",
+        "password": "danspassword",
+        "website": "wikipedia.com",
+        "role": "freelancer"
+    },
+    {
+        "name": "Bernie",
+        "location": "Los Angeles",
+        "email": "bernie@gmail.com",
+        "password": "berniepassword",
+        "website": "wikipedia.com",
+        "role": "freelancer"
+    },
+    {
+        "name": "Henry",
+        "location": "New York",
+        "email": "henry@gmail.com",
+        "password": "henrypassword",
+        "website": "wikipedia.com",
+        "role": "freelancer"
+    },
+    {
+        "name": "John",
+        "location": "Chester",
+        "email": "john@gmail.com",
+        "password": "johnpassword",
+        "website": "wikipedia.com",
+        "role": "freelancer"
+    },
+    {
+        "name": "Allan",
+        "location": "Utah",
+        "email": "allan@gmail.com",
+        "password": "allanpassword",
+        "website": "wikipedia.com",
+        "role": "freelancer"
+    },
+    {
+        "name": "company1",
+        "location": "Kansas",
+        "email": "company1@gmail.com",
+        "password": "company1password",
+        "website": "wikipedia.com",
+        "role": "employer"
+    },
+    {
+        "name": "company2",
+        "location": "Missouri",
+        "email": "company2@gmail.com",
+        "password": "company2password",
+        "website": "wikipedia.com",
+        "role": "employer"
+    },
+    {
+        "name": "company3",
+        "location": "Los Angeles",
+        "email": "company3@gmail.com",
+        "password": "company3password",
+        "website": "wikipedia.com",
+        "role": "employer"
+    },
+    {
+        "name": "company4",
+        "location": "New York",
+        "email": "company4@gmail.com",
+        "password": "company4password",
+        "website": "wikipedia.com",
+        "role": "employer"
+    },
+    {
+        "name": "company5",
+        "location": "Chester",
+        "email": "company5@gmail.com",
+        "password": "company5password",
+        "website": "wikipedia.com",
+        "role": "employer"
+    },
+    {
+        "name": "company6",
+        "location": "Utah",
+        "email": "company6@gmail.com",
+        "password": "company6password",
+        "website": "wikipedia.com",
+        "role": "employer"
+    }
+]

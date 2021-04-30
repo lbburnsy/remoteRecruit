@@ -10,7 +10,7 @@ body, html{
     position: relative;
     height: 600px;
     overflow: hidden;
-    background: url("./assets/pexels-ken-tomita-389818.jpg") no-repeat center;
+    background: url("../assets/pexels-ken-tomita-389818.jpg") no-repeat center;
     background-size: cover;
     margin-bottom: 20px;
     
@@ -31,7 +31,7 @@ body, html{
     margin-top: 500px;
 }
 
-.loginform{
+.login-form{
     background-color: white;
     border-radius: 20px;
 }
