@@ -25,8 +25,20 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/signup', (req, res) => {
-    res.render('signup');
+router.get('/signup/freelancer', (req, res) => {
+    try {
+        res.render('signupFreelancer');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/signup/employer', (req, res) => {
+    try {
+        res.render('signupEmployer');
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 module.exports = router;
