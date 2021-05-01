@@ -22,11 +22,7 @@
       </div>
 
       <div>
-        {{!-- edit --}}
-        {{#if freelancerProfileData.frontend}}
         <a href="#frontEnd"><button type="button" class="btn btn-dark">Front-End</button></a>
-          {{/if}}
-          {{!-- /edit --}}
         <a href="#backEnd"><button type="button" class="btn btn-dark">Back-End</button></a>
         <a href="#fullStack"><button type="button" class="btn btn-dark">Full-Stack</button></a>
       </div>
@@ -85,16 +81,3 @@
 
   </section>
 </main>
-
-
-{{!-- <section class="container">
-  {{#each jobs as |job| }}
-  <h4 id="{{job.jobTitle}}">{{job.jobTitle}}</h4>
-  <div class="card mx-5 my-3">
-    <div class="card-body">
-      <div>{{job.postingDate}}</div>
-      <div>{{job.location}}</div>
-    </div>
-  </div>
-  {{/each}}
-</section> --}}

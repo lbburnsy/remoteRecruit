@@ -50,6 +50,10 @@ User.init(
         categories: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        bio: {
+            type: DataTypes.TEXT,
+            allowNull: false
         }
     },
     {
