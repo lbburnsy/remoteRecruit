@@ -22,7 +22,11 @@
       </div>
 
       <div>
+        {{!-- edit --}}
+        {{#if freelancerProfileData.frontend}}
         <a href="#frontEnd"><button type="button" class="btn btn-dark">Front-End</button></a>
+          {{/if}}
+          {{!-- /edit --}}
         <a href="#backEnd"><button type="button" class="btn btn-dark">Back-End</button></a>
         <a href="#fullStack"><button type="button" class="btn btn-dark">Full-Stack</button></a>
       </div>
@@ -41,6 +45,11 @@
           <a href="/jobs/front-end/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
           <div>{{job.location}}</div>
+          {{!-- edit --}}
+          {{#if isEmployer}}
+          <div><a href="/update/{{job.id}}">Update</a> </div>
+           {{/if}}
+           {{!-- /edit --}}
         </div>
       </div>
       {{/each}}

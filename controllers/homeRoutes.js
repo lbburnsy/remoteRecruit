@@ -57,6 +57,56 @@ router.get("/login", (req, res) => {
   
     res.render("login");
   });
+
+  //My Stuff
+//   router.get('/freelancerhome', async (req, res) => {
+//     try {
+//         const freelancerProfileData=await User.GetProfile()
+//         const freelancerProfile=freelancerProfileData.map(data => data.get({ plain: true }));
+//         const frontEndData = await FrontEnd.findAll();
+//         const frontEndJobs = frontEndData.map(data => data.get({ plain: true }));
+        
+//         const backEndData = await BackEnd.findAll();
+//         const backEndJobs = backEndData.map(data => data.get({ plain: true }));
+
+//         const fullStackData = await FullStack.findAll();
+//         const fullStackJobs = fullStackData.map(data => data.get({ plain: true }));
+
+//         res.render('homepage', {
+//             freelancerProfileData,
+//             fullStackJobs,
+//             backEndJobs,
+//             frontEndJobs,
+//             logged_in: req.session.logged_in
+//         })
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// })
+
+// router.get('/employerhome', async (req, res) => {
+//     try {
+       
+//         const frontEndData = await FrontEnd.findByEmployeeID();
+//         const frontEndJobs = frontEndData.map(data => data.get({ plain: true }));
+        
+//         const backEndData = await BackEnd.findByEmployeeID();
+//         const backEndJobs = backEndData.map(data => data.get({ plain: true }));
+
+//         const fullStackData = await FullStack.findByEmployeeID();
+//         const fullStackJobs = fullStackData.map(data => data.get({ plain: true }));
+
+//         res.render('homepage', {
+//             fullStackJobs,
+//             backEndJobs,
+//             frontEndJobs,
+//             isEmployer:true,
+//             logged_in: req.session.logged_in
+//         })
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// })
   
 
 module.exports = router;
