@@ -46,6 +46,10 @@ User.init(
         role: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        categories: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     },
     {
