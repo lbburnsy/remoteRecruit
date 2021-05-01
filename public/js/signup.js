@@ -7,6 +7,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
   const location = document.querySelector('#location-signup').value.trim();
   const website = document.querySelector('#website-signup').value.trim();
+  const bio = document.querySelector('#bio-signup').value.trim();
   const role = document.querySelector('#name-signup').getAttribute("data-role");
 
   document.getElementsByName('developer-type')
@@ -17,10 +18,10 @@ const signupFormHandler = async (event) => {
       }
   });
   categories = JSON.stringify(categories);
-  if (name && email && password && location && role) {
+  if (name && email && password && location && bio && role) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password, location, website, role, categories }),
+      body: JSON.stringify({ name, email, password, location, website, bio, role, categories }),
       headers: { 'Content-Type': 'application/json' },
     });
 
