@@ -1,0 +1,54 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+/* body{
+    background-image: url('./ian-schneider-TamMbr4okv4-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+
+.heroImage{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: url("./pexels-ken-tomita-389818.jpg") no-repeat center;
+    background-size: cover;
+    margin-bottom: 20px;
+    
+}
+
+.introText{
+    margin-top: 100px;
+    padding-right: 70px;
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 0.534);
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.container .formContainer{
+    padding-top: 200px;
+    margin-top: 500px;
+}
+
+.loginform{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.signupcontainer{
+    margin-top: 100px;
+}
+
+.freelancerprofileheader{
+    margin-top: 50px;
+}
+
+
