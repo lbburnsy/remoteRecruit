@@ -94,6 +94,27 @@ router.get("/profile/employer", withAuth, async (req, res) => {
     }
 })
 
+router.get("/employer/jobs", withAuth, async(req, res) => {
+
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ["password"] },
+            include: [{ model: FrontEnd}, {model: BackEnd}, {model: FullStack}],
+        });
+
+        const user = userData.get({ plain: true });
+
+        console.log(user);
+
+        res.render("employerJobs", {
+            ...user,
+            logged_in: true,
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 //My Stuff
 //   router.get('/freelancerhome', async (req, res) => {
 //     try {
