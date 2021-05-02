@@ -1,0 +1,51 @@
+{{> navbar}}
+
+<main>
+        <div class="container formContainer mt-5">
+            <div class="row mt-5">
+              <div class="col mt-5">
+    
+                <form class="loginform p-5"> 
+                    <div class="mb-3">
+                        <label for="job-title-create" class="form-label">Job Title</label>
+                        <input type="email" class="form-control" id="job-title-create" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="job-description-create" class="form-label">Description</label>
+                        <input type="email" class="form-control" id="job-description-create" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="qualifications-create" class="form-label">Qualifications</label>
+                        <input type="password" class="form-control" id="qualifications-create">
+                    </div>
+                    <div class="mb-3">
+                        <label for="location-create" class="form-label">Where are you located</label>
+                        <input type="password" class="form-control" id="location-create">
+                    </div>
+
+                    <div class="category-switches p-3">
+                      <h5 class="jobcategoriestitle p-2">Job Categories</h5>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="front-end" name="developer-type" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Front-End</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="back-end" name="developer-type" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Back-End</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="full-stack" name="developer-type" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Full-Stack</label>
+                        </div>
+                        
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Job Listing</button>
+                </form>
+    
+              </div>
+    
+            </div>
+          </div>
+
+    </main>
