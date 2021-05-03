@@ -51,7 +51,7 @@ router.get("/employer/jobs", withAuth, async (req, res) => {
     let backEndJobs = user.backends.length > 0 ? { ...user.backends } : false;
 
     let fullStackJobs =
-      user.fullstacks.length > 0 ? { ...user.frontends } : false;
+      user.fullstacks.length > 0 ? { ...user.fullstacks } : false;
 
     res.render("employerJobs", {
       ...user,
@@ -64,5 +64,15 @@ router.get("/employer/jobs", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get("/employer/create", withAuth, async (req, res) => {
+    try {
+        res.render('createJob', {
+            logged_in: req.session.logged_in
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 module.exports = router;

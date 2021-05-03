@@ -32,6 +32,10 @@ FrontEnd.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     website: {
       type: DataTypes.STRING,
       allowNull: false,
