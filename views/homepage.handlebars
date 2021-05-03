@@ -18,13 +18,23 @@
   <section class="section-1">
     <div class="container">
       <div class="row pt-5">
+        {{#if hasJobs}}
         <h2 id="latestJobs">Latest Jobs</h2>
+        {{else}}
+        <h2>No current job postings.</h2>
+        {{/if}}
       </div>
 
       <div>
+        {{#if frontEndJobs}}
         <a href="#frontEnd"><button type="button" class="btn btn-dark">Front-End</button></a>
+        {{/if}}
+        {{#if backEndJobs}}
         <a href="#backEnd"><button type="button" class="btn btn-dark">Back-End</button></a>
+        {{/if}}
+        {{#if fullStackJobs}}
         <a href="#fullStack"><button type="button" class="btn btn-dark">Full-Stack</button></a>
+        {{/if}}
       </div>
 
       <br>
@@ -33,6 +43,7 @@
 
   <section class="container">
 
+    {{#if frontEndJobs}}
     <section class="container">
       <a href="/jobs/front-end"><h4 id="frontEnd">Front-End</h4></a>
        {{#each frontEndJobs as |job|}}
@@ -50,7 +61,9 @@
       </div>
       {{/each}}
     </section>
+    {{/if}}
 
+    {{#if backEndJobs}}
     <section class="container">
       <a href="/jobs/back-end"><h4 id="backEnd">Back-End</h4></a>
       {{#each backEndJobs as |job|}}
@@ -63,8 +76,9 @@
       </div>
       {{/each}}
     </section>
+    {{/if}}
 
-    
+    {{#if fullStackJobs}}
     <section class="container">
        <a href="/jobs/full-stack"><h4 id="fullStack">Full-Stack</h4></a>
       {{#each fullStackJobs as |job|}}
@@ -77,7 +91,7 @@
       </div>
       {{/each}}
     </section>
-
+    {{/if}}
 
   </section>
 </main>

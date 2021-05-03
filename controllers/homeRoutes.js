@@ -15,10 +15,15 @@ router.get("/", async (req, res) => {
       data.get({ plain: true })
     );
 
+    const hasJobs = ((frontEndJobs.length > 0) || (backEndJobs.length > 0) || (fullStackJobs.length > 0)) ? true : false;
+
+    console.log(hasJobs);
+
     res.render("homepage", {
       fullStackJobs,
       backEndJobs,
       frontEndJobs,
+      hasJobs,
       logged_in: req.session.logged_in,
       role: req.session.role,
     });
