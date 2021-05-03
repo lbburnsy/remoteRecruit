@@ -5,80 +5,78 @@
     <div class="row mt-5">
       <div class="d-flex flex-row freelancerprofileheader">
         <h3 class="">Employer Jobs Page</h3>
-        <a href="#" class="btn btn-primary btn-sm h-10 ms-auto mb-3">Create a new job listing</a>
+        <a href="/profile/employer/create" class="btn btn-primary btn-sm h-10 ms-auto mb-3">Create a new job listing</a>
       </div>
       <div class="col">
         <section class="section-1">
-          <div class="container">
+          <div class="container ">
 
 
             <div>
+              {{#if frontEndJobs}}
               <a href="#frontEnd"><button type="button" class="btn btn-dark">Front-End</button></a>
+              {{/if}}
+              {{#if backEndJobs}}
               <a href="#backEnd"><button type="button" class="btn btn-dark">Back-End</button></a>
+              {{/if}}
+              {{#if fullStackJobs}}
               <a href="#fullStack"><button type="button" class="btn btn-dark">Full-Stack</button></a>
+              {{/if}}
             </div>
 
             <br>
 
-            <h4 id="frontEnd">Front-end</h4>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
+            <div class="job-list">
+              {{#if frontEndJobs}}
+              <h4 id="frontEnd">Front-end</h4>
+              {{/if}}
+              {{#each frontEndJobs as |job|}}
+              <div class="card mx-5 my-3">
+                <div class="card-body">
+                  <p>{{job.name}}</p>
+                  <p>{{format_date job.date_created}}</p>
+                  <button class="btn btn-outline-primary" type="submit">View</button>
+                  <button class="btn btn-outline-primary" type="submit">Update</button>
+                  <button class="delete-btn btn btn-outline-primary" id="delete" data-id="{{job.id}}"
+                    data-category="{{job.category}}">Delete</button>
+                </div>
               </div>
-            </div>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
-              </div>
-            </div>
+              {{/each}}
 
+              {{#if backEndJobs}}
             <h4 id="backEnd">Back-End</h4>
+            {{/if}}
+            {{#each backEndJobs as |job|}}
             <div class="card mx-5 my-3">
               <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
+                <p>{{job.name}}</p>
+                <p>{{format_date job.date_created}}</p>
                 <button class="btn btn-outline-primary" type="submit">View</button>
                 <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
+                <button class="delete-btn btn btn-outline-primary" data-id="{{job.id}}"
+                  data-category="{{job.category}}">Delete</button>
               </div>
             </div>
+            {{/each}}
+
+            {{#if fullStackJobs}}
+            <h4 id="fullStack">Full-Stack</h4>
+            {{/if}}
+            {{#each fullStackJobs as |job|}}
             <div class="card mx-5 my-3">
               <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
+                <p>{{job.name}}</p>
+                <p>{{format_date job.date_created}}</p>
                 <button class="btn btn-outline-primary" type="submit">View</button>
                 <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
+                <button class="delete-btn btn btn-outline-primary" data-id="{{job.id}}"
+                  data-category="{{job.category}}">Delete</button>
               </div>
+            </div>
+            {{/each}}
             </div>
 
-            <h4 id="fullStack">Full-Stack</h4>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
-              </div>
-            </div>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
-              </div>
-            </div>
+            
 
 
           </div>
@@ -91,3 +89,6 @@
   </div>
 
 </main>
+
+<script src="/js/delete.js">
+</script>

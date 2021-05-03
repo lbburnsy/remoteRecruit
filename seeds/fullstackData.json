@@ -4,27 +4,31 @@
         "description": "Full stack developer position with focus Node and Javascript",
         "qualifications": "3+ years professional experience",
         "location": "USA",
-        "website": "wikipedia.com"
+        "website": "wikipedia.com",
+        "category": "fullstack"
     },
     {
         "name": "Full Stack Developer",
         "description": "Full stack developer position with focus Node and Javascript",
         "qualifications": "5+ years professional experience",
         "location": "New York",
-        "website": "wikipedia.com"
+        "website": "wikipedia.com",
+        "category": "fullstack"
     },
     {
         "name": "Full Stack Developer",
         "description": "Full stack developer position with focus Node and Javascript",
         "qualifications": "1+ years professional experience",
         "location": "Remote",
-        "website": "wikipedia.com"
+        "website": "wikipedia.com",
+        "category": "fullstack"
     },
     {
         "name": "Full Stack Developer",
         "description": "Full stack developer position with focus Node and Javascript",
         "qualifications": "2+ years professional experience",
         "location": "North America",
-        "website": "wikipedia.com"
+        "website": "wikipedia.com",
+        "category": "fullstack"
     }
 ]
