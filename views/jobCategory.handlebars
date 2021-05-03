@@ -1,0 +1,22 @@
+{{> navbar}}
+
+<section class="container">
+
+
+    <section class="container">
+    <h4 id="jobCategory">Front-End</h4>
+       {{#each jobsData as |job|}}
+      <div class="card mx-5 my-3">
+        <div class="card-body">
+          <a href="/jobs/{{job.category}}/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
+          <div>{{format_date job.date_created}}</div>
+          <div>{{job.location}}</div>
+        </div>
+      </div>
+      {{/each}}
+    </section>
+
+
+   
+
+  </section>
