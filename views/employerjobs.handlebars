@@ -13,72 +13,64 @@
 
 
             <div>
+              {{#if frontEndJobs}}
               <a href="#frontEnd"><button type="button" class="btn btn-dark">Front-End</button></a>
+              {{/if}}
+              {{#if backEndJobs}}
               <a href="#backEnd"><button type="button" class="btn btn-dark">Back-End</button></a>
+              {{/if}}
+              {{#if fullStackJobs}}
               <a href="#fullStack"><button type="button" class="btn btn-dark">Full-Stack</button></a>
+              {{/if}}
             </div>
 
             <br>
 
+
+            {{#if frontEndJobs}}
             <h4 id="frontEnd">Front-end</h4>
+            {{/if}}
+            {{#each frontEndJobs as |job|}}
             <div class="card mx-5 my-3">
               <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
+                <p>{{job.name}}</p>
+                <p>{{format_date job.date_created}}</p>
                 <button class="btn btn-outline-primary" type="submit">View</button>
                 <button class="btn btn-outline-primary" type="submit">Update</button>
                 <button class="btn btn-outline-primary" type="submit">Delete</button>
               </div>
             </div>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
-              </div>
-            </div>
+            {{/each}}
 
+            {{#if backEndJobs}}
             <h4 id="backEnd">Back-End</h4>
+            {{/if}}
+            {{#each backEndJobs as |job|}}
             <div class="card mx-5 my-3">
               <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
+                <p>{{job.name}}</p>
+                <p>{{format_date job.date_created}}</p>
                 <button class="btn btn-outline-primary" type="submit">View</button>
                 <button class="btn btn-outline-primary" type="submit">Update</button>
                 <button class="btn btn-outline-primary" type="submit">Delete</button>
               </div>
             </div>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
-              </div>
-            </div>
+            {{/each}}
 
+            {{#if fullStackJobs}}
             <h4 id="fullStack">Full-Stack</h4>
+            {{/if}}
+            {{#each fullStackJobs as |job|}}
             <div class="card mx-5 my-3">
               <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
+                <p>{{job.name}}</p>
+                <p>{{format_date job.date_created}}</p>
                 <button class="btn btn-outline-primary" type="submit">View</button>
                 <button class="btn btn-outline-primary" type="submit">Update</button>
                 <button class="btn btn-outline-primary" type="submit">Delete</button>
               </div>
             </div>
-            <div class="card mx-5 my-3">
-              <div class="card-body">
-                <p>Job Title</p>
-                <p>Date Posted</p>
-                <button class="btn btn-outline-primary" type="submit">View</button>
-                <button class="btn btn-outline-primary" type="submit">Update</button>
-                <button class="btn btn-outline-primary" type="submit">Delete</button>
-              </div>
-            </div>
+            {{/each}}
 
 
           </div>

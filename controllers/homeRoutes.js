@@ -60,61 +60,6 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/profile/freelancer", withAuth, async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ["password"] },
-      });
-    
-      const user = userData.get({ plain: true });
-    
-      res.render("freelancerProfile", {
-        ...user,
-        logged_in: true,
-      });
-  } catch (err) {
-      res.status(500).json(err);
-  }
-});
-
-router.get("/profile/employer", withAuth, async (req, res) => {
-    try {
-        const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ["password"] },
-        });
-
-        const user = userData.get({ plain: true });
-
-        res.render("employerProfile", {
-            ...user,
-            logged_in: true,
-        })
-    } catch (err) {
-        res.status(500).json(err);
-    }
-})
-
-router.get("/employer/jobs", withAuth, async(req, res) => {
-
-    try {
-        const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ["password"] },
-            include: [{ model: FrontEnd}, {model: BackEnd}, {model: FullStack}],
-        });
-
-        const user = userData.get({ plain: true });
-
-        console.log(user);
-
-        res.render("employerJobs", {
-            ...user,
-            logged_in: true,
-        })
-    } catch (err) {
-        res.status(500).json(err);
-    }
-})
-
 //My Stuff
 //   router.get('/freelancerhome', async (req, res) => {
 //     try {
