@@ -27,6 +27,9 @@ router.get("/:searchTerm", async (req, res) => {
     // gets the request and comment it back
     res.json(results)
     // replace ^ res.render("searchResults(handelbar template", object with results)
+    //res.render('searchResults{{handelbars}}, object);
+
+    // object = []
 });
 
 module.exports = router;
