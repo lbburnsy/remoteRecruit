@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const e = require("express");
 const { User, FullStack, BackEnd, FrontEnd } = require("../models");
 const withAuth = require("../utils/auth");
 
@@ -47,6 +48,29 @@ router.get("/signup/employer", (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get("/jobs/:category", withAuth, async (req, res) => {
+  try {
+    const category = req.params.category;
+    let jobData;
+    if (category == 'FrontEnd') {
+      jobData = await FrontEnd.findAll();
+    } else if (category == 'BackEnd') {
+      jobData = await BackEnd.findAll();
+    } else {
+      jobData = await FullStack.findAll();
+    }
+    const jobs = jobData.map((data) => data.get({ plain: true }));
+
+    res.render("jobCategory", {
+      jobs,
+      logged_in: req.session.logged_in,
+      role: req.session.role
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get("/logout", async (req, res) => {
   try {
