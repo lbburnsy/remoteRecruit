@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { User, FullStack, BackEnd, FrontEnd } = require("../../models");
 const withAuth = require("../../utils/auth");
-const jobRoutes = require("./jobRoutes");
+
 
 router.post("/frontend", withAuth, async (req, res) => {
     try {
