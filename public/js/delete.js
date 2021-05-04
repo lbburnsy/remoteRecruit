@@ -3,7 +3,7 @@ const delButtonHandler = async (event) => {
     const id = event.target.getAttribute("data-id");
     const category = event.target.getAttribute("data-category");
 
-    const response = await fetch(`/api/users/${category}/${id}`, {
+    const response = await fetch(`/api/jobs/${category}/${id}`, {
         method: "DELETE"
     });
 

@@ -28,7 +28,7 @@ const jobFormHandler = async (event) => {
     website &&
     category
   ) {
-    const response = await fetch(`/api/users/${category}`, {
+    const response = await fetch(`/api/jobs/${category}`, {
       method: "POST",
       body: JSON.stringify({
         name,
