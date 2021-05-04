@@ -6,7 +6,14 @@
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="input-group rounded w-25">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+      <div class="collapse navbar-collapse" id="avbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link" aria-current="page" href="/">Home</a>
           {{#if logged_in}}
