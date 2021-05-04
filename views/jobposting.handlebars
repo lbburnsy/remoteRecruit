@@ -1,0 +1,63 @@
+{{!-- The page that shows details about a specific job --}}
+
+{{> navbar}}
+
+<main>
+        <div class="container mt-5">
+            <div class="row mt-5">
+                <div class="col-lg-8 col-md-8 col-sm-12 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Job Title</h5>
+                          <button type="button" class="btn btn-primary active btn-sm" data-bs-toggle="button" autocomplete="off">Category</button>
+                        <div class="card-body">
+                            <h5 class="card-title">Description</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Qualifications</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <!-- <ul class="list-group list-group-flush">
+                          <li class="list-group-item">An item</li>
+                          <li class="list-group-item">A second item</li>
+                          <li class="list-group-item">A third item</li>
+                        </ul> -->
+                        <div class="card-body">
+                            <h5 class="card-title">Location</h5>
+                            <p></p>
+                            <p class="card-text"></p>
+                        </div>
+                        <div class="card-body d-flex flex-row">
+                            <a href="#" class="btn btn-primary btn-sm h-10 ms-auto mb-3">Back to all jobs</a>
+                            <a href="#" class="btn btn-primary btn-sm h-10 ms-auto mb-3">Back to Category Name</a>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                <div class="card border-secondary mb-3  " style="max-width: 18rem;">
+                    <div class="card-header">{{user.name}}</div>
+                    <div class="card-body text-secondary">
+                      <p class="card-title">{{user.location}}</p>
+                      <div class="card-body">
+                        <a href="{{website}}" target="_blank" class="card-link">{{website}}</a>
+                      </div>
+                      <div class="card-body">
+                          {{!-- future dev, check later --}}
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Apply for this position</a>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="card-link">View all jobs</a>
+                      </div>
+                      
+                      
+                      
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
