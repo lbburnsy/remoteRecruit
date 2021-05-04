@@ -8,9 +8,7 @@ router.use('/backend', backEndRoutes);
 router.use('/frontend', frontEndRoutes);
 router.use('fullstack', fullStackRoutes);
 //search function (new tech)
-router.use('/minisearch', async
-
-(req,res)=>{ 
+router.use('/minisearch', async (req,res)=>{ 
   const searchTerm = req.body.searchTerm 
     const documents = await 
    
@@ -19,7 +17,7 @@ router.use('/minisearch', async
     })
      
     miniSearch.addAll(documents)
-    let results = miniSearch.search()
+    let results = miniSearch.search(searchTerm)
     // gets the request and comment it back
     res.json(results)
 })
