@@ -2,23 +2,13 @@ const router = require('express').Router();
 const backEndRoutes = require('./backEndRoutes');
 const frontEndRoutes = require('./frontEndRoutes');
 const fullStackRoutes = require('./fullStackRoutes');
-const MiniSearch = require('minisearch')
+const searchRoute = require('./searchRoute');
 
 router.use('/backend', backEndRoutes);
 router.use('/frontend', frontEndRoutes);
-router.use('fullstack', fullStackRoutes);
+router.use('/fullstack', fullStackRoutes);
 //search function (new tech)
-router.use('/minisearch', async (req,res)=>{ 
-  const searchTerm = req.body.searchTerm 
-    const documents = await 
-   
-    let miniSearch = new MiniSearch({
-      storeFields: ['title', 'category'] 
-    })
-     
-    miniSearch.addAll(documents)
-    let results = miniSearch.search(searchTerm)
-    // gets the request and comment it back
-    res.json(results)
-})
+router.use('/minisearch', searchRoute); 
+
+
 module.exports = router;
