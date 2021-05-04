@@ -19,21 +19,21 @@
     <div class="container">
       <div class="row pt-5">
         {{#if hasJobs}}
-        <h2 id="latestJobs">Latest Jobs</h2>
+        <h3 id="latestJobs">Latest Jobs</h3>
         {{else}}
-        <h2>No current job postings.</h2>
+        <h3>No current job postings.</h3>
         {{/if}}
       </div>
 
       <div>
         {{#if frontEndJobs}}
-        <a href="#frontEnd"><button type="button" class="btn btn-dark">Front-End</button></a>
+        <a href="#frontEnd"><button type="button" class="btn btn-dark btn-sm">Front-End</button></a>
         {{/if}}
         {{#if backEndJobs}}
-        <a href="#backEnd"><button type="button" class="btn btn-dark">Back-End</button></a>
+        <a href="#backEnd"><button type="button" class="btn btn-dark btn-sm">Back-End</button></a>
         {{/if}}
         {{#if fullStackJobs}}
-        <a href="#fullStack"><button type="button" class="btn btn-dark">Full-Stack</button></a>
+        <a href="#fullStack"><button type="button" class="btn btn-dark btn-sm">Full-Stack</button></a>
         {{/if}}
       </div>
 
@@ -47,7 +47,8 @@
     <section class="container">
       <a href="/jobs/FrontEnd"><h4 id="frontEnd">Front-End</h4></a>
        {{#each frontEndJobs as |job|}}
-      <div class="card mx-5 my-3">
+      
+      <div class="card mx-5 my-2 shadow p-3 mb-3 bg-body rounded">
         <div class="card-body">
           <a href="/jobs/FrontEnd/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
@@ -59,7 +60,11 @@
            {{!-- /edit --}}
         </div>
       </div>
+  
       {{/each}}
+      <div class="d-grid gap-2 col-6 mx-auto">
+              <a href="/jobs/FrontEnd" class="ms-auto"><button type="button" class="btn btn-outline-secondary btn-sm ms-auto">View all Full-Stack jobs</button></a>
+      </div>
     </section>
     {{/if}}
 
@@ -67,7 +72,7 @@
     <section class="container">
       <a href="/jobs/BackEnd"><h4 id="backEnd">Back-End</h4></a>
       {{#each backEndJobs as |job|}}
-      <div class="card mx-5 my-3">
+      <div class="card mx-5 my-2 shadow p-3 mb-3 bg-body rounded">
         <div class="card-body">
           <a href="/jobs/BackEnd/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
@@ -75,6 +80,9 @@
         </div>
       </div>
       {{/each}}
+      <div class="d-grid gap-2 col-6 mx-auto">
+              <a href="/jobs/BackEnd" class="ms-auto"><button type="button" class="btn btn-outline-secondary btn-sm ms-auto">View all Full-Stack jobs</button></a>
+      </div>
     </section>
     {{/if}}
 
@@ -82,7 +90,7 @@
     <section class="container">
        <a href="/jobs/FullStack"><h4 id="fullStack">Full-Stack</h4></a>
       {{#each fullStackJobs as |job|}}
-       <div class="card mx-5 my-3">
+       <div class="card mx-5 my-2 shadow p-3 mb-3 bg-body rounded">
         <div class="card-body">
           <a href="/jobs/FullStack/{{job.id}}"><h4 id="{{job.name}}">{{job.name}}</h4></a>
           <div>{{format_date job.date_created}}</div>
@@ -90,6 +98,9 @@
         </div>
       </div>
       {{/each}}
+      <div class="d-grid gap-2 col-6 mx-auto mb-5">
+              <a href="/jobs/FullStack" class="ms-auto"><button type="button" class="btn btn-outline-secondary btn-sm ms-aut">View all Full-Stack jobs</button></a>
+      </div>
     </section>
     {{/if}}
 
