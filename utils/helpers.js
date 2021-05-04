@@ -13,5 +13,15 @@ module.exports = {
       // return Categoriesobj.map((element, index) => `<li> ${element} </li>` );
       
 
+      },
+
+      capitalize_first: (category) => {
+        if (category == 'fullstack') {
+          return 'FullStack'
+        } else if (category == 'frontend') {
+          return 'FrontEnd'
+        } else {
+          return 'BackEnd'
+        }
       }
 }

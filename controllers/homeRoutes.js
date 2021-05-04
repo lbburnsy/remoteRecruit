@@ -72,6 +72,40 @@ router.get("/jobs/:category", withAuth, async (req, res) => {
   }
 })
 
+router.get("/jobs/:category/:id", withAuth, async (req, res) => {
+  try {
+    const category = req.params.category;
+    const id = req.params.id;
+    let jobData;
+
+    if (category == 'FrontEnd') {
+      jobData = await FrontEnd.findByPk(id, {
+        include: [{ model: User}]
+      })
+    } else if (category == 'BackEnd') {
+      jobData = await BackEnd.findByPk(id, {
+        include: [{ model: User}]
+      })
+    } else {
+      jobData = await FullStack.findByPk(id, {
+        include: [{ model: User}]
+      })
+    }
+
+    job = jobData.get({ plain: true });
+    console.log(job);
+
+    res.render("jobPosting", {
+      ...job,
+      logged_in: req.session.logged_in,
+      role: req.session.role
+    })
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get("/logout", async (req, res) => {
   try {
     res.redirect("/");
