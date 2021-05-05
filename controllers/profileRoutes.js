@@ -41,7 +41,7 @@ router.get("/employer", withAuth, async (req, res) => {
 // Get route that takes you to the job dashboard on the employer profile.
 router.get("/employer/jobs", withAuth, async (req, res) => {
   try {
-    // Gets hte user by primary key, including all of the job models.
+    // Gets the user by primary key, including all of the job models.
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
       include: [{ model: FrontEnd }, { model: BackEnd }, { model: FullStack }],

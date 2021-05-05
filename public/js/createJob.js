@@ -1,7 +1,10 @@
+// Function to handle the creation of a job posting.
 const jobFormHandler = async (event) => {
   event.preventDefault();
+  // Holds the value of the selected category.
   let categories = [];
 
+  // Query the document for values.
   const name = document.querySelector("#job-title-create").value.trim();
   const description = document
     .querySelector("#job-description-create")
@@ -12,6 +15,7 @@ const jobFormHandler = async (event) => {
   const location = document.querySelector("#location-create").value.trim();
   const website = document.querySelector("#website-create").value.trim();
 
+  // Handles the checkbox functionality.
   document.getElementsByName("developer-type").forEach((checkbox) => {
     if (checkbox.checked) {
       console.log(checkbox.value);
@@ -20,6 +24,7 @@ const jobFormHandler = async (event) => {
   });
   let category = categories[0];
 
+  // Verifies input, and then sends the post request.
   if (
     name &&
     description &&
@@ -36,7 +41,7 @@ const jobFormHandler = async (event) => {
         qualifications,
         location,
         website,
-        category
+        category,
       }),
       headers: { "Content-Type": "application/json" },
     });
