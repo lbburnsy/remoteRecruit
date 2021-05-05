@@ -29,6 +29,7 @@ body, html{
 .container .formContainer{
     padding-top: 200px;
     margin-top: 500px;
+    background-color: white;
 }
 
 .login-form{
@@ -62,4 +63,18 @@ body, html{
     color: white;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.searchboxformat{
+    width: 200px;
+}
+
+.signup-form{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.jobCreateForm{
+    background-color: white;
+    border-radius: 20px;
 }
