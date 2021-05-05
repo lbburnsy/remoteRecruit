@@ -35,31 +35,3 @@ body, html{
     background-color: white;
     border-radius: 20px;
 }
-
-.anchorstyle{
-    color: black;
-    text-decoration: none;
-}
-
-.login-img{
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background: url("../assets/pexels-ekaterina-bolovtsova-4050216.jpg") no-repeat center;
-    background-size: cover;
-    margin-bottom: 20px;
-}
-
-.jobpostingcategory{
-    border: solid, 1px, black;
-}
-
-.introText{
-    margin-top: 100px;
-    padding-right: 70px;
-    padding-left: 50px;
-    background-color: rgba(0, 0, 0, 0.534);
-    color: white;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}

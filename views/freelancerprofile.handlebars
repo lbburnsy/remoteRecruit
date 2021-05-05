@@ -1,12 +1,13 @@
 {{!-- Freelancer Profile Page --}}
 
 {{> navbar}}
+
 <main>
 
-  <div class="container freelancerprofile mt-5 pt-2">
+  <div class="container freelancerprofile mt-5 mb-3">
     <div class="row mt-5 pt-2">
       <div class="d-flex flex-row freelancerprofileheader pt-5">
-        <h3 class="">Freelancer Profile Page</h3>
+        <h4 class="">Freelancer Dashboard</h4>
         <a href="#" class="btn btn-primary btn-sm h-10 ms-auto mb-3">View My Jobs</a>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
@@ -19,8 +20,8 @@
             <a href="#freelancername" class="list-group-item list-group-item-action" aria-current="true">
               Name
             </a>
-            <a href="#freelancerlocation" class="list-group-item list-group-item-action">Location</a>
             <a href="#freelancerbio" class="list-group-item list-group-item-action">Bio</a>
+            <a href="#freelancerlocation" class="list-group-item list-group-item-action">Location</a>
             <a href="#jobcategories" class="list-group-item list-group-item-action">Job Categories</a>
             <a href="#freelancerwebsite" class="list-group-item list-group-item-action">Website</a>
 
@@ -29,32 +30,32 @@
       </div>
 
       <div class="col-lg-8 col-md-8 col-sm-12">
-        <div class="card mb-3 shadow p-3 mb-3 bg-body rounded" id="freelancername">
+        <div class="card mb-3 shadow p-2 mb-3 bg-body rounded" id="freelancername">
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">Name</h4>
             <p>{{name}}</p>
-            <a href="#" class="btn btn-outline-primary btn-sm w-10 ms-auto">Update</a>
+            <a href="#" class="btn btn-primary btn-sm w-10 ms-auto">Update</a>
           </div>
         </div>
-        <div class="card mb-3 shadow p-3 mb-3 bg-body rounded" id="freelancerbio">
+        <div class="card mb-3 shadow p-2 mb-3 bg-body rounded" id="freelancerbio">
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">Bio</h4>
             <p>{{bio}}</p>
-            <a href="#" class="btn btn-outline-primary btn-sm w-10 ms-auto">Update</a>
+            <a href="#" class="btn btn-primary btn-sm w-10 ms-auto">Update</a>
           </div>
         </div>
-        <div class="card mb-3 shadow p-3 mb-3 bg-body rounded" id="freelancerlocation">
+        <div class="card mb-3 shadow p-2 mb-3 bg-body rounded" id="freelancerlocation">
           <div class="card-body d-flex flex-column">
             <h4 class="card-title">Location</h4>
             <p>{{location}}</p>
-            <a href="#" class="btn btn-outline-primary btn-sm w-10 ms-auto">Update</a>
+            <a href="#" class="btn btn-primary btn-sm w-10 ms-auto">Update</a>
           </div>
         </div>
-        <div class="card mb-3 shadow p-3 mb-3 bg-body rounded" id="freelancerprofile">
+        <div class="card mb-3 shadow p-2 mb-3 bg-body rounded" id="freelancerprofile">
           <div class="card-body d-flex flex-column">
             <h4 class="card-title" id="jobcategories">Job Categories</h4>
             <p>{{format_categories categories}}</p>
-            <a href="#" class="btn btn-outline-primary btn-sm w-10 ms-auto">Update</a>
+            <a href="#" class="btn btn-primary btn-sm w-10 ms-auto">Update</a>
           </div>
         </div>
         <div class="card mb-3 shadow p-3 mb-3 bg-body rounded" id="freelancerwebsite">
@@ -62,7 +63,7 @@
             <h4 class="card-title">Website</h4>
             <a href="{{website}}" target="blank">{{website}}</a>
 
-            <a href="#" class="btn btn-outline-primary btn-sm w-10 ms-auto">Update</a>
+            <a href="#" class="btn btn-primary btn-sm w-10 ms-auto">Update</a>
           </div>
         </div>
 
