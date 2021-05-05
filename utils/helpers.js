@@ -23,5 +23,15 @@ module.exports = {
         } else {
           return 'BackEnd'
         }
+      },
+
+insert_space: (category) => {
+        if (category == 'fullstack') {
+          return 'Full Stack'
+        } else if (category == 'frontend') {
+          return 'Front End'
+        } else {
+          return 'Back End'
+        }
       }
 }
