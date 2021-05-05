@@ -42,6 +42,7 @@ router.get("/:searchTerm", withAuth, async (req, res) => {
   res.render("searchResults", {
     results,
     role: req.session.role,
+    logged_in: req.session.logged_in
   });
 });
 
