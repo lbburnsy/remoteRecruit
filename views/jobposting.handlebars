@@ -12,9 +12,9 @@
                   </div>
                   <div class="card-body">
                     <p class="card-title p-2">Location: {{user.location}}</p>
-                    <p>Website: <a href="{{website}}" target="_blank" class="card-link py-2">{{website}}</a></p>
-                             <a href="/jobs/{{capitalize_first category}}" class="btn btn-primary btn-sm mb-1 py-2">{{insert_space category}} Apply for this position</a>
-                     <a href="/" class="btn btn-primary btn-sm mb-1 py-2">View all jobs</a>
+                    <p>Website: <a href="http://{{user.website}}" target="blank" class="card-link py-2">{{user.website}}</a></p>
+                             <a href="{{website}}" class="btn btn-primary btn-sm mb-1 py-2">Apply for this position</a>
+                     <a href="/employer/jobs/{{user.id}}" class="btn btn-primary btn-sm mb-1 py-2">View all {{user.name}} jobs</a>
                     
                      
                    
