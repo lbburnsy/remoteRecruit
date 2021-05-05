@@ -5,30 +5,46 @@
 <main>
         <div class="container mt-5">
             <div class="row mt-5">
-                <div class="col-lg-8 col-md-8 col-sm-12 mt-5">
-                    <div class="card">
+              <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
+                <div class="card text-center shadow p-3 bg-body rounded">
+                  <div class="card-header">
+                      <h5><strong>{{user.name}}</strong>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title p-2">Location: {{user.location}}</p>
+                    <p>Website: <a href="{{website}}" target="_blank" class="card-link py-2">{{website}}</a></p>
+                             <a href="/jobs/{{capitalize_first category}}" class="btn btn-primary btn-sm mb-1 py-2">{{insert_space category}} Apply for this position</a>
+                     <a href="/" class="btn btn-primary btn-sm mb-1 py-2">View all jobs</a>
+                    
+                     
+                   
+                  </div>
+                </div>
+              </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-12 mt-5 mb-2">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
                         <div class="card-body">
-                          <h5 class="card-title">{{name}}</h5>
-                          <button type="button" class="btn btn-primary active btn-sm" data-bs-toggle="button" autocomplete="off">{{category}}</button>
+                          <h5 class="card-title"><strong>{{name}}</strong></h5>
+                          <p><strong>Job Category</strong></p>
+                          <button type="button" class="btn btn-dark active btn-sm" data-bs-toggle="button" autocomplete="off">{{category}}</button>
+
+                          <hr>
+
                         <div class="card-body">
-                            <h5 class="card-title">Description</h5>
+                            <h5 class="card-title my-3"><strong>Description</strong></h5>
                             <p class="card-text">{{description}}</p>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Qualifications</h5>
+                            <h5 class="card-title my-3"><strong>Qualifications</strong></h5>
                             <p class="card-text">{{qualifications}}</p>
                         </div>
-                        <!-- <ul class="list-group list-group-flush">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                          <li class="list-group-item">A third item</li>
-                        </ul> -->
                         <div class="card-body">
-                            <h5 class="card-title">Location</h5>
+                            <h5 class="card-title my-3 mx-auto"><strong>Location</strong></h5>
                             <p>{{location}}</p>
                             <p class="card-text"></p>
                         </div>
-                        <div class="card-body d-flex flex-row">
+                        <div class="card-body d-flex-col flex-row">
                             <a href="/" class="btn btn-primary btn-sm h-10 ms-auto mb-3">Back to all jobs</a>
                             <a href="/jobs/{{capitalize_first category}}" class="btn btn-primary btn-sm h-10 ms-auto mb-3">{{insert_space category}} Jobs</a>
                         </div>
@@ -36,28 +52,7 @@
                 </div>
                 
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5">
-                <div class="card border-secondary mb-3  " style="max-width: 18rem;">
-                    <div class="card-header">{{user.name}}</div>
-                    <div class="card-body text-secondary">
-                      <p class="card-title">{{user.location}}</p>
-                      <div class="card-body">
-                        <a href="{{user.website}}" target="_blank" class="card-link">{{user.website}}</a>
-                      </div>
-                      <div class="card-body">
-                          {{!-- future dev, check later --}}
-                        <a class="btn btn-primary btn-sm" href="{{website}}" role="button">Apply for this position</a>
-                      </div>
-                      <div class="card-body">
-                        <a href="/jobs/employer/{{user.id}}" class="card-link">View all {{user.name}} jobs</a>
-                      </div>
-                      
-                      
-                      
-
-                    </div>
-                </div>
-            </div>
+           
         </div>
         </div>
     </main>

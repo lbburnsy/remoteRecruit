@@ -4,10 +4,10 @@
 
 <main>
 
-      <div class="container formContainer mt-5">
+      <div class="container-fluid formContainer mt-5">
         <div class="row mt-5">
-          <div class="col-6 mt-5">
-
+          <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
+            <h5 class="mb-5">Welcome Back</h5>
             <form class="login-form p-5"> 
               <div class="mb-3">
                 <label for="email-login" class="form-label">Email address</label>
@@ -18,14 +18,17 @@
                 <label for="password-login" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password-login">
               </div>
+              <div id="passwordHelpBlock" class="form-text m-2">
+                Your password must be at least 8 characters long.
+              </div>
               <button type="submit" class="btn btn-primary">Login</button>
             </form>
 
           </div>
 
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-sm-12 login-img">
 
-            <img src="./assets/pexels-ekaterina-bolovtsova-4050216.jpg" alt="side image">
+            {{!-- <img src="./assets/pexels-ekaterina-bolovtsova-4050216.jpg" alt="side image"> --}}
 
           </div>
         </div>

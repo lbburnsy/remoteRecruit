@@ -51,6 +51,7 @@ router.get("/signup/employer", (req, res) => {
 
 router.get("/jobs/:category", withAuth, async (req, res) => {
   try {
+    
     const category = req.params.category;
     let jobData;
     if (category == 'FrontEnd') {
@@ -61,9 +62,12 @@ router.get("/jobs/:category", withAuth, async (req, res) => {
       jobData = await FullStack.findAll();
     }
     const jobs = jobData.map((data) => data.get({ plain: true }));
+const jobCategory=category;
+console.log("Helloooooo"+jobCategory);
 
     res.render("jobCategory", {
       jobs,
+      jobCategory,
       logged_in: req.session.logged_in,
       role: req.session.role
     })

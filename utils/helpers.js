@@ -26,9 +26,9 @@ module.exports = {
       },
 
 insert_space: (category) => {
-        if (category == 'fullstack') {
+        if (category.toLowerCase() == 'fullstack') {
           return 'Full Stack'
-        } else if (category == 'frontend') {
+        } else if (category.toLowerCase() == 'frontend') {
           return 'Front End'
         } else {
           return 'Back End'
