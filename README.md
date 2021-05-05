@@ -16,8 +16,7 @@ For a full demo of the application: [Insert Demo Here]()
 
 [Usage](#usage)
 
-[Future-Development] 
-
+[Future-Development](future-development)
 
 [Credits](#Credits)
 
@@ -27,7 +26,9 @@ For a full demo of the application: [Insert Demo Here]()
 
 [Contributing](#contributing)
 
-[Tests] (#tests)
+[Tests](#tests)
+
+[Deployed-Links](#deployed-links)
 
 [Questions](#questions)
 
@@ -40,16 +41,23 @@ For a full demo of the application: [Insert Demo Here]()
 5. Handlebars 
 6. Minisearch NPM package
 7. Dependencies:
+    * bcrypt
     * dotenv
     * mysql2
-    * sequelize 
+    * sequelize
+    * connect-session-sequelize
+    * express 
+    * express-handlebars
+    * express-session
 
 ## Installation
-To install the application follow the following steps:
+To install the application locally follow the following steps:
 1. Clone the repository from github 
 2. Install handlebars using 'npm install handlebars' in git bash
 3. Install the npm package through the 'npm install minisearch' command
 4. Create database 'freecruiter_db' using mysql
+
+The app can be accessed through heroku; contact any of the contributors for the link
 
 ## Usage
 The usage of the application is dual-sided depending on whether the user signs up as a freelancer or employer 
@@ -59,6 +67,11 @@ The user is able to sign up and create an account by entering his/her personal a
 
 As an employer:
 The user is able to create job listings by entering descriptive information about the role in a form including: job title, description, qualifications needed, and location. Similarly the employer will have the option to select from the three categories front-end, back-end, and full-stack. They would then have an Employers Jobs page where they can view, update, and delete the job listings that they've created.
+
+## Future Developments
+
+1. Installation of a view saved jobs button on freelancer profile
+2. Installation of update job listing, view job listing, and delete job listing options on employer profile
 
 ## Credits
 
@@ -101,6 +114,7 @@ SOFTWARE.
 ![minisearch](https://img.shields.io/badge/minisearch-npm%20package-blue)
 ![sequelize](https://img.shields.io/badge/sequelize-npm%20package-blue)
 ![handlebars](https://img.shields.io/badge/handlebars-29%25-orange)
+![express](https://img.shields.io/badge/express-npm%20package-blue)
 
 ## Contributing 
 
@@ -108,6 +122,9 @@ To contribute to this project, please make sure you follow the guidelines in [Th
 
 ## Tests 
 The Freecruiter application can be tested through Insomnia to make sure that all the routes work as intended and the final results of adding, updating or deleting can be visually seen on MySQL Workbench.
+
+## Deployed links 
+Github link : https://github.com/lbburnsy/project-2
 
 ## Questions
 For any questions, please contact me any of the core contributors [Credits](#Credits)
