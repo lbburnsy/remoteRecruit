@@ -59,6 +59,7 @@ router.get("/employer/jobs", withAuth, async (req, res) => {
       backEndJobs,
       fullStackJobs,
       logged_in: true,
+      role: req.session.role
     });
   } catch (err) {
     res.status(500).json(err);
