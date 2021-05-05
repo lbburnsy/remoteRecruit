@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User, FullStack, BackEnd, FrontEnd } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+// Route to handle creation of a frontend Job.
 router.post("/frontend", withAuth, async (req, res) => {
   try {
     const frontEndData = await FrontEnd.create({
@@ -15,6 +16,7 @@ router.post("/frontend", withAuth, async (req, res) => {
   }
 });
 
+// Route to handle creation of a backend job.
 router.post("/backend", withAuth, async (req, res) => {
   try {
     const backEndData = await BackEnd.create({
@@ -28,6 +30,7 @@ router.post("/backend", withAuth, async (req, res) => {
   }
 });
 
+// Route to handle creation of a fullstack job.
 router.post("/fullstack", withAuth, async (req, res) => {
   try {
     const fullStackData = await FullStack.create({
@@ -41,6 +44,7 @@ router.post("/fullstack", withAuth, async (req, res) => {
   }
 });
 
+// Deletes a front end job, by id.
 router.delete("/frontend/:id", withAuth, async (req, res) => {
   try {
     const jobData = await FrontEnd.destroy({
@@ -56,6 +60,7 @@ router.delete("/frontend/:id", withAuth, async (req, res) => {
   }
 });
 
+// Deletes a backend job by id.
 router.delete("/backend/:id", withAuth, async (req, res) => {
   try {
     const jobData = await BackEnd.destroy({
@@ -71,6 +76,7 @@ router.delete("/backend/:id", withAuth, async (req, res) => {
   }
 });
 
+// Deletes a fullstack job by id.
 router.delete("/fullstack/:id", withAuth, async (req, res) => {
   try {
     const jobData = await FullStack.destroy({
