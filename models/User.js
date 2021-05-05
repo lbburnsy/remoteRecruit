@@ -40,7 +40,7 @@ User.init(
             },
         },
         website: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: true,
         },
         role: {

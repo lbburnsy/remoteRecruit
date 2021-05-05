@@ -68,7 +68,8 @@ router.get("/employer/jobs", withAuth, async (req, res) => {
 router.get("/employer/create", withAuth, async (req, res) => {
     try {
         res.render('createJob', {
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            role: req.session.role
         })
     } catch (err) {
         res.status(500).json(err);
