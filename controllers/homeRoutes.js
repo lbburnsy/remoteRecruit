@@ -2,6 +2,7 @@ const router = require("express").Router();
 const e = require("express");
 const { User, FullStack, BackEnd, FrontEnd } = require("../models");
 const withAuth = require("../utils/auth");
+const { route } = require("./profileRoutes");
 
 router.get("/", async (req, res) => {
   try {
@@ -82,6 +83,8 @@ router.get("/jobs/:category/:id", withAuth, async (req, res) => {
     const id = req.params.id;
     let jobData;
 
+    console.log(category, id);
+
     if (category == 'FrontEnd') {
       jobData = await FrontEnd.findByPk(id, {
         include: [{ model: User}]
@@ -105,6 +108,40 @@ router.get("/jobs/:category/:id", withAuth, async (req, res) => {
       role: req.session.role
     })
 
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+router.get("/employer/jobs/:id", async (req, res) => {
+  try{
+    let id = req.params.id;
+    const userData = await User.findByPk(id, {
+      attributes: {exclude: ["password"]},
+      include: [{ model: FrontEnd }, {model: BackEnd}, { model: FullStack }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    console.log(user);
+
+    let frontEndJobs =
+      user.frontends.length > 0 ? { ...user.frontends } : false;
+
+    let backEndJobs = user.backends.length > 0 ? { ...user.backends } : false;
+
+    let fullStackJobs =
+      user.fullstacks.length > 0 ? { ...user.fullstacks } : false;
+
+    res.render("employerCategory", {
+      ...user,
+      frontEndJobs,
+      backEndJobs,
+      fullStackJobs,
+      logged_in: true,
+      role: req.session.role
+    });
+    
   } catch (err) {
     res.status(500).json(err);
   }

@@ -20,14 +20,15 @@ router.get("/:searchTerm", async (req, res) => {
   console.log(allJobs);
 
   let miniSearch = new MiniSearch({
-    storeFields: ["name", "description", "date_created", "location"],
+    storeFields: ["name", "description", "date_created", "location", "category"],
     fields: ["id", "name", "date_created", "location"],
   });
-  console.log("Hello");
+
   miniSearch.addAll(allJobs);
   // console.log(frontEndItems);
   // miniSearch.addAll(documentsBE);
   let results = miniSearch.search(searchTerm);
+
   // gets the request and comment it back
   //res.json(documents);
   // console.log(results);
