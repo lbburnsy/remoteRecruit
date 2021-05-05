@@ -31,7 +31,7 @@
               <h5 id="frontEnd">Front-end job listing</h5>
               {{/if}}
               {{#each frontEndJobs as |job|}}
-              <div class="card mx-5 my-3">
+              <div class="card my-3">
                 <div class="card-body">
                   <p>{{job.name}}</p>
                   <p>{{format_date job.date_created}}</p>
@@ -47,7 +47,7 @@
               <h5 id="backEnd">Back-End job listings</h5>
               {{/if}}
               {{#each backEndJobs as |job|}}
-              <div class="card mx-5 my-3">
+              <div class="card my-3">
                 <div class="card-body">
                   <p>{{job.name}}</p>
                   <p>{{format_date job.date_created}}</p>
@@ -63,7 +63,7 @@
               <h5 id="fullStack">Full-Stack job listings</h5>
               {{/if}}
               {{#each fullStackJobs as |job|}}
-              <div class="card mx-5 my-3">
+              <div class="card my-3">
                 <div class="card-body">
                   <p>{{job.name}}</p>
                   <p>{{format_date job.date_created}}</p>
