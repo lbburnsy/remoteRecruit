@@ -21,7 +21,7 @@ router.get("/:searchTerm", async (req, res) => {
 
   let miniSearch = new MiniSearch({
     storeFields: ["name", "description", "date_created", "location", "category"],
-    fields: ["id", "name", "date_created", "location"],
+    fields: ["id", "name", "date_created", "location", "category"],
   });
 
   miniSearch.addAll(allJobs);

@@ -20,12 +20,16 @@ module.exports = {
           return 'FullStack'
         } else if (category == 'frontend') {
           return 'FrontEnd'
-        } else {
+        } else if (category == 'backend') {
           return 'BackEnd'
+        } else if (category == 'employer') {
+          return 'Employer'
+        } else if (category == 'freelancer') {
+          return 'Freelancer'
         }
       },
 
-insert_space: (category) => {
+        insert_space: (category) => {
         if (category.toLowerCase() == 'fullstack') {
           return 'Full Stack'
         } else if (category.toLowerCase() == 'frontend') {
