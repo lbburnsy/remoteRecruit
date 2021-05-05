@@ -113,7 +113,7 @@ router.get("/jobs/:category/:id", withAuth, async (req, res) => {
   }
 })
 
-router.get("/employer/jobs/:id", async (req, res) => {
+router.get("/employer/jobs/:id", withAuth, async (req, res) => {
   try{
     let id = req.params.id;
     const userData = await User.findByPk(id, {
@@ -145,6 +145,10 @@ router.get("/employer/jobs/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+})
+
+router.get("/construction", async (req, res) => {
+  res.render("underConstruction");
 })
 
 router.get("/logout", async (req, res) => {
