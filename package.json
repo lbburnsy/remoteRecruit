@@ -1,7 +1,7 @@
 {
-  "name": "project-2",
+  "name": "remoteRecruit",
   "version": "1.0.0",
-  "description": "Freelance marketplace",
+  "description": "Freelance job marketplace",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lbburnsy/project-2.git"
+    "url": "git+https://github.com/lbburnsy/remoteRecruit"
   },
   "keywords": [
     "Freelance",
     "Marketplace"
   ],
-  "author": "Luc Burns, Noha Ashraf, Brittany Plummer, Kennedy Otuo",
-  "license": "ISC",
+  "author": "Luc Burns, Noha Ashraf, Brittany Plummer",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lbburnsy/project-2/issues"
   },
