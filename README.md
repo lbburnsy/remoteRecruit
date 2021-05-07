@@ -18,7 +18,7 @@ remoteRecruit is deployed on Heroku through the following link [remoteRecruit](h
 
 [Usage](#usage)
 
-[freeCruit-Features](#freeCruit-Features)
+[remoteRecruit-Features](#remoteRecruit-Features)
 
 [Responsive-Design](#Responsive-Design)
 
@@ -136,7 +136,7 @@ Once the job is created it can be viewed on the Employer Jobs Page and more jobs
 
 Viewing the job listing provides the application user with the ability to visit the employer website, go back to view all jobs related to this particular employer or view all the jobs that belong to the same category. 
 
-## freeCruit Features
+## remoteRecruit Features
 ### Homepage
 The Homepage is designed for easy navigation and to provide the user with the best experience. The Homepage includes the following components:
 **Navbar**
