@@ -1,0 +1,1 @@
+const delButtonHandler=async t=>{if(t.target.hasAttribute("data-id")){const e=t.target.getAttribute("data-id"),a=t.target.getAttribute("data-category");(await fetch(`/api/jobs/${a}/${e}`,{method:"DELETE"})).ok?document.location.replace("/profile/employer/jobs"):alert("Failed to delete post")}};document.querySelector(".job-list").addEventListener("click",delButtonHandler);
