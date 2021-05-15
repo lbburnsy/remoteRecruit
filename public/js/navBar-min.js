@@ -1,0 +1,1 @@
+var clearBtn=document.querySelector("#search-btn");function clearSearch(){var e=document.getElementById("searchbar").value;window.location="/search/"+e}clearBtn.addEventListener("click",clearSearch);
